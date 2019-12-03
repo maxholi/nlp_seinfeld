@@ -1,0 +1,68 @@
+
+CV RESULTS for stop words included
+
+500 tf-idf features used
+
+took 0:23:46.739707 for CV LOGISTIC tuning
+
+best parameters found: {'C': 0.1, 'class_weight': None}
+
+CV f beta score for best params: 0.40087658346250465
+
+
+took 0:24:15.528386 for CV SVM tuning
+
+best parameters found: {'C': 0.01, 'class_weight': None}
+
+CV f beta score for best params: 0.3999144796621947
+
+
+1000 tf-idf features used
+
+took 0:26:46.323672 for CV LOGISTIC tuning
+
+best parameters found: {'C': 0.1, 'class_weight': None}
+
+CV f beta score for best params: 0.4028007910631247
+
+
+took 0:27:14.733945 for CV SVM tuning
+
+best parameters found: {'C': 0.01, 'class_weight': None}
+
+CV f beta score for best params: 0.40237318937409805
+
+
+CV RESULTS for no_stop words included
+
+500 tf-idf features used
+
+took 0:11:29.155245 for CV LOGISTIC tuning
+
+best parameters found: {'C': 0.1, 'class_weight': None}
+
+CV f beta score for best params: 0.39583445166138814
+
+
+took 0:11:57.638423 for CV SVM tuning
+
+best parameters found: {'C': 0.01, 'class_weight': None}
+
+CV f beta score for best params: 0.39556605292823016
+
+
+1000 tf-idf features used
+
+took 0:13:14.328155 for CV LOGISTIC tuning
+
+best parameters found: {'C': 1, 'class_weight': None}
+
+CV f beta score for best params: 0.39819636051317836
+
+
+took 0:13:37.432232 for CV SVM tuning
+
+best parameters found: {'C': 0.01, 'class_weight': None}
+
+CV f beta score for best params: 0.39599549090128294
+

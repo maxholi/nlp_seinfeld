@@ -41,7 +41,45 @@ def notfound(error):
 
 @application.route('/v1/character', methods=['POST'])
 def character_classification():
-    """ function to run a predition and post on API service for a new piece of text"""
+    """run character classifiation prediction
+        ---
+        parameters:
+          - name: body
+            in: body
+            schema:
+              id: text
+              required:
+                - text
+              properties:
+                text:
+                  type: string
+            description: the required text for POST method
+            required: true
+        definitions:
+          SentimentResponse:
+          Project:
+            properties:
+              status:
+                type: string
+              ml-result:
+                type: object
+        responses:
+          40x:
+            description: Client error
+          200:
+            description: Character Classification Response
+            examples:
+                          [
+{
+  "status": "success",
+  "sentiment": "1"
+},
+{
+  "status": "error",
+  "message": "Exception caught"
+},
+]
+        """
     json_request = request.get_json()
     if not json_request:
         return Response("No json provided.", status=400)
@@ -55,7 +93,27 @@ def character_classification():
 
 @application.route('/v1/character/categories', methods=['GET'])
 def character_categories():
-    """function to obtain the labels for the predictive model """
+    """Possible character categories.
+        ---
+        definitions:
+          CategoriestResponse:
+          Project:
+            properties:
+              categories:
+                type: object
+        responses:
+          40x:
+            description: Client error
+          200:
+            description: Character Classification Response
+            examples:
+                          [
+{
+  "categories": [1,2,3],
+  "sentiment": "1"
+}
+]
+        """
     return flask.jsonify({"categories": ['elaine','george','jerry','kramer']})
 
 
